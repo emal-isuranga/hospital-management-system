@@ -10,7 +10,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 include_once '../../config/database.php';
  
 // instantiate product object
-include_once './channelling.php';
+include_once './objects/channelling.php';
  
 $database = new Database();
 $db = $database->getConnection();
@@ -30,7 +30,7 @@ if(
 ){
  
     // set product property values
-    $product->name = $data->name;
+    $product->patient_id = $data->patient_id;
     $product->patient_name = $data->patient_name;
     $product->doctor_id = $data->doctor_id;
     $product->doc_name = $data->doc_name;
